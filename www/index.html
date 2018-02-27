@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	 <!-- <meta http-equiv="Content-Security-Policy" content="
+			default-src https://* 'self' 'unsafe-inline' ws://10.85.136.19:3000/ http://code.jquery.com https://code.jquery.com  https://ssl.gstatic.com wss://s-usc1c-nss-239.firebaseio.com gap: data: blob: filesystem: ;
+	" /> -->
+	<!-- jQuery Mobile CSS-->
+
+
+	<!--Get firebase JS-->
+
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<script src="js/client.js"></script>
+	 <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="	crossorigin="anonymous"></script>
+	 <!-- jQuery Mobile -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	<!-- Styles -->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- App -->
+
+
+	<title>Helsinki Lunch Lottery</title>
+</head>
+<body>
+
+	<div data-role="page" id="welcome" class="xiongContainer">
+
+		<div class="xiongHeader">
+			<h1>Helsinki Lunch Lottery</h1>
+		</div>
+
+		<div role="main" class="main">
+		</div>
+	</div>
+
+	<div data-role="page" id="result" data-url="result" class="xiongContainer">
+		<div class="xiongHeader">
+			<h1>Helsinki Lunch Lottery</h1>
+		</div>
+    <div role="main" class="ui-content">
+		<div id="map"></div>
+		<div id="restaurant-info"></div>
+			</div>
+	</div>
+<script src="js/map.js"></script>
+<script src="js/algoritm.js"></script>
+<script src="js/app.js"></script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLfJUdG4JNYmYf1zVrVnHoZLnGXAO4eaw&callback=initMap">
+	</script>
+
+
+
+</body>
+
+</html>
