@@ -95,8 +95,8 @@ function displayRestaurant() {
     "<h2>"+ chosenRestaurant.name +"</h2>" +
     "<p><em>"+ chosenRestaurant.type +"</em></p>" +
     "<p>"+ chosenRestaurant.address + "</p>" +
-    "<p>"+ lunchMenu + "</p>" +
-    "<span onclick='location.reload()'>Reset</span>"
+    "<p>"+ lunchMenu +
+    "<span class='lunchMenuBtn' onclick='location.reload()'>Reset</span></p>"
   );
 
 

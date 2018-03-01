@@ -16,7 +16,7 @@ function displayData() {
 
   $(document).on("pagecreate", "#result", function() {		//Sivun luonti, tehdään kerran
 
-    
+    initMap();
 
 });
 
