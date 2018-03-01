@@ -8,7 +8,7 @@ function displayData() {
   });
 
   $(document).on("pagecreate", "#welcome", function() { 	//Sivun luonti, tehdään kerran
-    let welcomeMsg = "<a href='#result'><h2 id='xiongWelcomeMsg'>Shake your phone for random restaurant near you</h2></a>";
+    let welcomeMsg = "<a href='#result'><h2 id='xiongWelcomeMsg'>Click for random restaurant near you</h2></a>";
     $('.main').html(welcomeMsg);
 
 

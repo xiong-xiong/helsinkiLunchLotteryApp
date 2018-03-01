@@ -14,6 +14,7 @@ function restaurantLoop() {
       var restaurantLat = childSnapshot.child("lat").val();
       var restaurantLng = childSnapshot.child("lon").val();
       var restaurantUrl = childSnapshot.child("url").val();
+      //Create easy to handle object for processRestaurants function and displayRestaurant to handle
       var restaurant = {
         'name': restaurantName,
         'lng': restaurantLng,
