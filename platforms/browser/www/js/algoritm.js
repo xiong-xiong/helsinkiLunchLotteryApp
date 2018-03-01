@@ -13,12 +13,14 @@ function restaurantLoop() {
       var restaurantAddress = childSnapshot.child("address").val();
       var restaurantLat = childSnapshot.child("lat").val();
       var restaurantLng = childSnapshot.child("lon").val();
+      var restaurantUrl = childSnapshot.child("url").val();
       var restaurant = {
         'name': restaurantName,
         'lng': restaurantLng,
         'lat': restaurantLat,
         'address': restaurantAddress,
-        'type': restaurantType
+        'type': restaurantType,
+        'url': restaurantUrl
       }
       console.log('Tämän pitäisi olla aiemmin kuin vikan');
       restaurantLoc = {lat: restaurantLat, lng: restaurantLng};
@@ -82,12 +84,19 @@ function displayRestaurant() {
   var arrayLength = theArray.length;
   var randomNum = Math.floor(Math.random()*arrayLength);
   chosenRestaurant = theArray[randomNum];
-  console.log('Tämän pitäisi olla vika funkkari');
+  console.log(chosenRestaurant.url);
   restaurantLoc = {lat: chosenRestaurant.lat, lng: chosenRestaurant.lng};
+  if(chosenRestaurant.url != 'NA'||null) {
+    var lunchMenu = "<a class='lunchMenuBtn' href='" + chosenRestaurant.url + "' class='menuBtn'> Lunch Menu </a>";
+  }else {
+    var lunchMenu = "Ravintolalla ei ole verkkosivuja";
+  }
   jQuery("#restaurant-info").html(
     "<h2>"+ chosenRestaurant.name +"</h2>" +
     "<p><em>"+ chosenRestaurant.type +"</em></p>" +
-    "<p>"+ chosenRestaurant.address +"</p>"
+    "<p>"+ chosenRestaurant.address + "</p>" +
+    "<p>"+ lunchMenu + "</p>" +
+    "<span onclick='location.reload()'>Reset</span>"
   );
 
 

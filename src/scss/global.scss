@@ -69,3 +69,13 @@ h1, h2, h3, h4 {
     font-size: 4vh;
   }
 }
+.lunchMenuBtn {
+  background: $brand1;
+  height: 55px;
+  line-height: 55px;
+  padding: 0px 20px;
+  color: $white !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
