@@ -19,23 +19,25 @@ var restaurantLoc;
 var chosenRestaurant;
 
 function initMap() {
+
+
     //Google maps uses this as a callback function automaticly so it's kind of MAIN in this app
 
     //Check if geolocation is enabled
     if (navigator && navigator.geolocation) {
-      console.log('arrayn sisältö initmapin alussa: '+ theArray);
+
       //get users current position and init successCallback function
       navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
     } else {
       //If geolocation is disabled user default location
       userLocation = defaultLoc;
-      console.log('geolocation not allowed');
+
     }
 
     function errorCallback() {
       //something went wrong with geolocation even though it's allowed. Bad signal for example
-      console.log('error with geolocation');
+
       userLat = defaultLoc.lat;
       userLng = defaultLoc.lng;
       userLocation = new google.maps.LatLng(defaultLoc.lat, defaultLoc.lng);
@@ -49,8 +51,6 @@ function initMap() {
       userLng = position.coords.longitude;
       userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
       restaurantLoop();
-
-      console.log('arrayn sisältö success callbackin lopussa: '+ theArray);
 
     }
 

@@ -1,4 +1,5 @@
 // Initialize Firebase
+console.log('client loaded');
  var config = {
    apiKey: "AIzaSyDZ6O5w3QW2bnEDDpE_uypo6JgQ5UZIBKE",
    authDomain: "helsinkilunchlottery.firebaseapp.com",

@@ -1,7 +1,9 @@
-function displayData() {
-  var firebaseGetRef = firebase.database().ref("Items");
 
-}
+
+// function displayData() {
+//   var firebaseGetRef = firebase.database().ref("Items");
+//
+// }
 
   $(document).one("pagebeforecreate", function () { //Ennen minkä tahansa sivun luomista, tehdään kerran (.one)
 
@@ -14,8 +16,10 @@ function displayData() {
 
   });
 
-  $(document).on("pagecreate", "#result", function() {		//Sivun luonti, tehdään kerran
+  $(document).on("pageinit", "#result", function() {		//Sivun luonti, tehdään kerran
 
+
+    console.log('result page loaded');
     initMap();
 
 });

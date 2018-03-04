@@ -643,6 +643,30 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-buildinfo/www/buildinfo.js",
+        "id": "cordova-plugin-buildinfo.BuildInfo",
+        "pluginId": "cordova-plugin-buildinfo",
+        "clobbers": [
+            "BuildInfo"
+        ]
+    },
+    {
+        "file": "plugins/cordova-universal-links-plugin/www/universal_links.js",
+        "id": "cordova-universal-links-plugin.universalLinks",
+        "pluginId": "cordova-universal-links-plugin",
+        "clobbers": [
+            "universalLinks"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-browsertab/www/browsertab.js",
+        "id": "cordova-plugin-browsertab.BrowserTab",
+        "pluginId": "cordova-plugin-browsertab",
+        "clobbers": [
+            "cordova.plugins.browsertab"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -667,7 +691,11 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.2",
     "cordova-plugin-dialogs": "1.2.1",
     "cordova-plugin-file-transfer": "1.5.1",
-    "cordova-plugin-geolocation": "2.1.0"
+    "cordova-plugin-geolocation": "2.1.0",
+    "cordova-plugin-buildinfo": "2.0.1",
+    "cordova-universal-links-plugin": "1.2.1",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-browsertab": "0.2.0"
 }
 // BOTTOM OF METADATA
 });

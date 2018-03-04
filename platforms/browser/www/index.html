@@ -12,14 +12,23 @@
 	<!-- jQuery Mobile CSS-->
 
 
-	<!--Get firebase JS-->
+	<!--Get Google JS-->
 
+	<!-- removed async and defer atributes from google maps script call-->
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLfJUdG4JNYmYf1zVrVnHoZLnGXAO4eaw">
+		</script>
+	<!--Get firebase JS-->
 	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
 	<script src="js/client.js"></script>
 	 <!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="	crossorigin="anonymous"></script>
 	 <!-- jQuery Mobile -->
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 
 
@@ -53,18 +62,20 @@
 		<div id="restaurant-info"></div>
 			</div>
 	</div>
-<script src="js/map.js"></script>
-<script src="js/algoritm.js"></script>
-<script src="js/app.js"></script>
+
+
 
 <!-- THIS STARTS EVERYTHING SINCE IT HAS A CALLBACK FUNCTION IN URL
 <script async defer
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLfJUdG4JNYmYf1zVrVnHoZLnGXAO4eaw&callback=initMap">
 	</script>-->
-	<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLfJUdG4JNYmYf1zVrVnHoZLnGXAO4eaw">
-		</script>
+<script src="js/main.js"></script>
 
+
+	<script src="js/app.js"></script>
+<script>
+	  console.log('DOM loaded');
+</script>
 
 </body>
 

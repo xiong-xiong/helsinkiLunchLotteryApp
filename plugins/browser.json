@@ -63,11 +63,23 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-buildinfo": {
+            "PACKAGE_NAME": "com.juhastenroos.lunchlottery"
+        },
+        "cordova-universal-links-plugin": {
+            "PACKAGE_NAME": "com.juhastenroos.lunchlottery"
+        },
+        "cordova-plugin-browsertab": {
+            "PACKAGE_NAME": "com.juhastenroos.lunchlottery"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.juhastenroos.lunchlottery"
         }
     }
 }

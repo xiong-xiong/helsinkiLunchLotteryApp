@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.juhastenroos.lunchlottery" version="1.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.juhastenroos.lunchlottery" version="2.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Helsinki Lunch Lottery</name>
     <description>
         Application picks a random lunchplace based on users location.
@@ -10,11 +10,18 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
-    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
-    <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
+    <preference name="AndroidLaunchMode" value="singleTask" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
-    <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
+
+
+
+    <plugin name="cordova-plugin-buildinfo" source="npm" />
+    <plugin name="cordova-universal-links-plugin" source="npm" />
+    <plugin name="cordova-plugin-browsertab" source="npm" />
+
+
+
+
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2" />
@@ -28,7 +35,6 @@
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
-    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
@@ -101,6 +107,9 @@
         <splash height="1920" platform="windows" src="www/res/screen/windows/SplashScreenPhone.scale-240.png" width="1152" />
     </platform>
     <access origin="*" />
+    <access uri="https://*.firebaseio.com" subdomains="true" />
+    <access origin="http://maps.google.com" />
+
 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -115,4 +124,14 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+    <universal-links>
+    <host name="https://rzbj6.app.goo.gl
+" scheme="https" />
+    <host name="helsinkilunchlottery.firebaseapp.com" scheme="https">
+        <path url="/__/auth/callback"/>
+    </host>
+  </universal-links>
+
+
 </widget>
